@@ -2,6 +2,8 @@ package com.example.ktaylor.baparty;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +17,8 @@ public class PartyPage extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_party_page);
         final Button button = findViewById(R.id.invite_button);
+        final MediaPlayer mPlayer = MediaPlayer.create(this.getApplicationContext(), R.raw.come_fly_with_me);
+        mPlayer.start();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,7 +30,10 @@ public class PartyPage extends Activity {
                 sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
                 startActivity(Intent.createChooser(sharingIntent, "Share the party!"));
 
+                mPlayer.stop();
             }
         });
+
+
     }
 }
