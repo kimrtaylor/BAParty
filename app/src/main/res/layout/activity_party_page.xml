@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fontFamily="@font/kim_font"
-    android:background="@drawable/bitmap_confetti">
+    android:background="@drawable/bitmap_confetti"
+    android:id="@+id/frame_layout">
     <!--android:background="@drawable/bitmap"-->
     <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;>-->
 
@@ -22,6 +23,7 @@
         android:layout_gravity="center" />
 
     <ImageView
+        android:id="@+id/gif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/party_gif"

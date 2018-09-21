@@ -3,7 +3,6 @@ package com.example.ktaylor.baparty;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,8 +11,13 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.DrawableImageViewTarget;
+
 
 public class PartyPage extends Activity {
 
@@ -30,12 +34,19 @@ public class PartyPage extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_party_page);
         final Button button = findViewById(R.id.invite_button);
         final MediaPlayer mPlayer = MediaPlayer.create(this.getApplicationContext(), R.raw.ibiza_test1);
         mPlayer.start();
+
+        final ImageView imageView = findViewById(R.id.gif);
+        Glide.with(this.getApplicationContext())
+                .load(R.drawable.party_gif)
+                .into(new DrawableImageViewTarget(imageView));
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
