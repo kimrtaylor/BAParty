@@ -25,7 +25,7 @@ public class PartyPage extends Activity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_party_page);
         final Button button = findViewById(R.id.invite_button);
-        final MediaPlayer mPlayer = MediaPlayer.create(this.getApplicationContext(), R.raw.come_fly_with_me);
+        final MediaPlayer mPlayer = MediaPlayer.create(this.getApplicationContext(), R.raw.ibiza_test1);
         mPlayer.start();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
