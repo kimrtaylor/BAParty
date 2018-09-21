@@ -6,20 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".BookingPage"
     android:background="@drawable/confirmation_screen">
+    <!--android:fontFamily="@font/kim_font">-->
 
     <Button
         android:id="@+id/party_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:height="30dp"
-        android:backgroundTint="@android:color/darker_gray"
-        android:text="Let's celebrate!"
+        android:height="50dp"
+        android:width="200dp"
+        android:backgroundTint="#4C97FA"
+        android:text="LET'S CELEBRATE!"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintVertical_bias="0.588" />
 
 </android.support.constraint.ConstraintLayout>
