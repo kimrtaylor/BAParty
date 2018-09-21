@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:height="30dp"
         android:backgroundTint="@android:color/darker_gray"
-        android:text="Let's PARTYYYYYYY"
+        android:text="Let's celebrate!"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
